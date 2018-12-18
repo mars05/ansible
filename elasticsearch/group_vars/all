@@ -1,8 +1,8 @@
 ---
-binary_name: elasticsearch-6.3.2.tar.gz
+binary_name: elasticsearch-6.5.3.tar.gz
 binary_src_dir: /opt/downloadfile
 install_dir: /opt/app/elasticsearch
-app_name: elasticsearch-6.3.2
+app_name: elasticsearch-6.5.3
 
 log_dir: /var/log/elasticsearch
 data_dir: /var/data/elasticsearch
