@@ -1,0 +1,7 @@
+---
+- name: create web install directory
+  file: path={{ web_install_dir }} state=directory
+- name: unarchive web binary to install directory
+  unarchive: src={{ web_binary_src_dir }}/{{ web_binary_name }} dest={{ web_install_dir }}
+- name: copy application.conf to install directory
+  template: src=application.conf dest={{ web_install_dir }}/{{web_app_name}}/conf/application.conf

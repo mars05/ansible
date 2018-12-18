@@ -1,0 +1,13 @@
+---
+- name: create kafka install directory
+  file: path={{ install_dir }} state=directory
+- name: create kafka data logs directory
+  file: path={{ log_dirs }} state=directory
+- name: unarchive kafka binary to install directory
+  unarchive: src={{ binary_src_dir }}/{{ binary_name }} dest={{ install_dir }}
+- name: copy server.properties to install directory
+  template: src=server.properties dest={{ install_dir }}/{{app_name}}/config/server.properties
+- name: copy log4j.properties to install directory
+  template: src=log4j.properties dest={{ install_dir }}/{{app_name}}/config/log4j.properties
+
+
