@@ -4,7 +4,7 @@
   remote_user: root
   tasks:
     - name: restart...
-      shell: "kill `ps -ef | grep elasticsearch | grep -v grep | awk '{print $2}'`;{{install_dir}}/{{app_name}}/bin/elasticsearch -d"
+      shell: "kill `ps -ef | grep elasticsearch | grep -v grep | awk '{print $2}'`;su -s /bin/bash es -c '{{install_dir}}/{{app_name}}/bin/elasticsearch -d'"
       async: 10
       poll: 5
 
