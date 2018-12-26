@@ -1,0 +1,7 @@
+---
+- name: Clean
+  hosts: all
+  remote_user: root
+  tasks:
+  - name: clear install directory
+    shell: rm -fr {{ install_dir }}/*

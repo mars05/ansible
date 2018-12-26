@@ -1,4 +1,7 @@
 ---
+ik_download_url: https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.3.0/elasticsearch-analysis-ik-6.5.3.zip
+
+ik_binary_name: elasticsearch-analysis-ik-6.5.3.zip
 binary_name: elasticsearch-6.5.3.tar.gz
 binary_src_dir: /opt/downloadfile
 install_dir: /opt/app/elasticsearch

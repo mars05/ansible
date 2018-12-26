@@ -9,5 +9,3 @@
   unarchive: src={{ binary_src_dir }}/{{ binary_name }} dest={{ install_dir }}
 - name: copy templates to install directory
   template: src=elasticsearch.yml dest={{ install_dir }}/{{app_name}}/config/elasticsearch.yml
-- name: set the user to the directory
-  shell: chown -R es:es {{ install_dir }} {{log_dir}} {{data_dir}}
