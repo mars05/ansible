@@ -7,5 +7,7 @@
   file: path={{ data_dir }} state=directory
 - name: unarchive binary to install directory
   unarchive: src={{ binary_src_dir }}/{{ binary_name }} dest={{ install_dir }}
-- name: copy templates to install directory
+- name: copy elasticsearch.yml to install directory
   template: src=elasticsearch.yml dest={{ install_dir }}/{{app_name}}/config/elasticsearch.yml
+- name: copy jvm.options to install directory
+  template: src=jvm.options dest={{ install_dir }}/{{app_name}}/config/jvm.options
